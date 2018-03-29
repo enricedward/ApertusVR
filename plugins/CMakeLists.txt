@@ -21,6 +21,7 @@
 #SOFTWARE.
 
 option(APE_PLUGIN_OgreRender "Use OgreRenderPlugin?" ON )
+option(APE_PLUGIN_Ogre21Render "Use Ogre21RenderPlugin?" OFF )
 option(APE_PLUGIN_OisUserInput "Use OisUserInputPlugin?" ON )
 option(APE_PLUGIN_SampleScene "Use SampleScenePlugin?" ON )
 option(APE_PLUGIN_EngineeringScene "Use EngineeringScenePlugin?" ON )
@@ -51,6 +52,9 @@ option(APE_PLUGIN_RobotCalibration "Use RobotCalibrationPlugin?" ON )
 
 if (${APE_PLUGIN_OgreRender})
 	add_subdirectory (ogreRender)
+endif ()	
+if (${APE_PLUGIN_Ogre21Render})
+	add_subdirectory (ogre21Render)
 endif ()	
 if (${APE_PLUGIN_OisUserInput})
 	add_subdirectory (oisUserInput)
